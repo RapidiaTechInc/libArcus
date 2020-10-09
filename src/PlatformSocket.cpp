@@ -17,6 +17,7 @@
  */
 
 #include "PlatformSocket_p.h"
+#include <iostream>
 
 #ifdef _WIN32
 #include <winsock2.h>
