@@ -18,7 +18,7 @@
 
 #include "PlatformSocket_p.h"
 #include <iostream>
-
+#include <string>
 #ifdef _WIN32
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -91,7 +91,7 @@ bool Arcus::Private::PlatformSocket::create()
 bool Arcus::Private::PlatformSocket::connect(const std::string &address, int port)
 {
     auto address_data = createAddress(address, port);
-    std::cout << "address data:" << address_data << "\n";
+    std::cout << "address data:" + std::to_string(address_data) << "\n";
     int result = ::connect(_socket_id, reinterpret_cast<sockaddr *>(&address_data), sizeof(address_data));
     return result == 0;
 }
