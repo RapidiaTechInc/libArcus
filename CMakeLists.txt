@@ -110,6 +110,8 @@ if(${CMAKE_BUILD_TYPE})
     endif()
 endif()
 
+add_definitions(-DARCUS_DEBUG)
+
 set_target_properties(Arcus PROPERTIES
     FRAMEWORK FALSE
     VERSION ${ARCUS_VERSION}
