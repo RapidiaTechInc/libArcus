@@ -413,11 +413,11 @@ namespace Arcus
 
             if (signature != ARCUS_SIGNATURE)
             {
-                DEBUG(header);
-                DEBUG(current_message);
-                DEBUG(signature);
+                std::cout << header << endl;
+                DEBUG(std::string(current_message));
+                DEBUG(std::string(signature));
                 // Someone might be speaking to us in a different protocol?
-                error(ErrorCode::ReceiveFailedError, "Header mismatch");
+                error(ErrorCode::ReceiveFailedError, "Header mismatch :(");
                 current_message.reset();
                 platform_socket.flush();
                 return;
