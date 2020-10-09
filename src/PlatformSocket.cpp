@@ -93,6 +93,7 @@ bool Arcus::Private::PlatformSocket::connect(const std::string &address, int por
     auto address_data = createAddress(address, port);
     std::cout << "address data:"
               << "\n";
+    std::cout << &address_data << "\n";
     int result = ::connect(_socket_id, reinterpret_cast<sockaddr *>(&address_data), sizeof(address_data));
     return result == 0;
 }
