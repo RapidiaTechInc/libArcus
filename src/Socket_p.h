@@ -413,9 +413,9 @@ namespace Arcus
 
             if (signature != ARCUS_SIGNATURE)
             {
-                std::cout << header << std::endl;
-                DEBUG(std::string(current_message));
-                DEBUG(std::string(signature));
+                std::cout << "header:" << header << std::endl;
+                std::cout << "current message:" << (std::string(current_message)) << std::endl;
+                std::cout<<"signature:"<< std::string(signature))<<std::endl;
                 // Someone might be speaking to us in a different protocol?
                 error(ErrorCode::ReceiveFailedError, "Header mismatch :(");
                 current_message.reset();
