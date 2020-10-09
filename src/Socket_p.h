@@ -413,7 +413,7 @@ namespace Arcus
 
             if (signature != ARCUS_SIGNATURE)
             {
-                std::cout << header << endl;
+                std::cout << header << std::endl;
                 DEBUG(std::string(current_message));
                 DEBUG(std::string(signature));
                 // Someone might be speaking to us in a different protocol?
